@@ -1,0 +1,55 @@
+---
+layout: page
+---
+
+{% for post in paginator.posts %}
+  <h2 class="post-title">
+    <a href="{{post.url | prepend:site.baseurl | prepend:site.url}}">
+      {{ post.title }}
+    </a>
+  </h3>
+
+  <div class="post-meta">
+  <div class="post-time">
+    <!--<i class="fa fa-calendar"></i>-->
+    Posted on:
+    <time>{{ post.date | date_to_string }}</time>
+  </div>
+  <ul>
+    <li>Tags:</li>
+    {% for tag in post.tags %}
+    <li><a href="{{site.baseurl | prepend:site.url}}/tag/{{ tag }}">{{ tag }}</a></li>
+    {% endfor %}
+  </ul>
+</div>
+
+  <div class="post-descr text-justify">
+    <p>
+      {{ post.content }}
+    </p>
+  </div>
+  Posted by: Ashwin Narayan |  <a href="{{post.url | prepend:site.baseurl | prepend:site.url}}">Comments</a>
+  <hr>
+  {% endfor %}
+
+  <!-- Pagination links -->
+  <div class="pagination">
+    {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path | prepend: site.baseurl | prepend: site.url}}" class="previous btn">Previous</a>
+    {% else %}
+    <span class="previous btn">Previous</span>
+    {% endif %}
+    <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+    {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path | prepend: site.baseurl | prepend: site.url}}" class="next btn">Next</a>
+    {% else %}
+    <span class="next btn">Next</span>
+    {% endif %}
+  </div>
+
+
+<div class="post-footer">
+  <div class="column-full">
+    <h3><a href="{{ '/archive.html' | prepend: site.baseurl | prepend: site.url }}">Blog archive</a></h3>
+  </div>
+</div>

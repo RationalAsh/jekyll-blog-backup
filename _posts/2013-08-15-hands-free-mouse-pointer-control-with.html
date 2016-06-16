@@ -1,0 +1,17 @@
+---
+layout: post
+title: Hands Free Mouse Pointer Control with OpenCV
+date: '2013-08-15T13:58:00.002+05:30'
+author: Ashwin Narayan
+comments: true
+tags:
+- opencv
+- programming
+- technical
+modified_time: '2015-10-05T16:13:49.485+05:30'
+thumbnail: https://img.youtube.com/vi/5BM9F5m54Io/default.jpg
+blogger_id: tag:blogger.com,1999:blog-259194268438499485.post-3364862184140475167
+blogger_orig_url: http://ashwinnarayan.blogspot.com/2013/08/hands-free-mouse-pointer-control-with.html
+---
+
+<div dir="ltr" style="text-align: left;" trbidi="on">So I've been busy with a lot of things lately and one of the things I've been working on is a program that tracks a coloured marker (I use a lime green ball) using my laptop's webcam and controls the movement of the my mouse pointer.<br /><br />I posted the code on github. Note that I did this on Ubuntu with xdotool installed. So this code won't compile and run unless you have Linux with xdotool installed.<br /><br />Here's a video demonstration of the program working:<br /><br /><div class="separator" style="clear: both; text-align: center;"><br /><iframe width="320" height="266" class="YOUTUBE-iframe-video" data-thumbnail-src="https://i.ytimg.com/vi/5BM9F5m54Io/0.jpg" src="https://www.youtube.com/embed/5BM9F5m54Io?feature=player_embedded" frameborder="0" allowfullscreen></iframe></div><div class="separator" style="clear: both; text-align: center;"><br /></div>What I'm really impressed with is extremely low latency I can achieve with this program. Since I was using real time image processing I expected there to be a significant lag in the movement of the mouse when compared to the movement of the ball. But as it turns out, the latency is almost unnoticeable. Hopefully I can develop this into a full blown hands free interface for my laptop.&nbsp;</div>
